@@ -51,11 +51,12 @@ export interface ITranscodeResponse {
         height: number;
     }>;
 }
-declare global {
-    interface Window {
-        BASIS: BASIS;
-    }
-}
+// Note(LukeAbby): Due to the conflict with `pixi-basis-ktx2` this has been commented out.
+// declare global {
+//     interface Window {
+//         BASIS: BASIS;
+//     }
+// }
 /**
  * This wraps the transcoder web-worker functionality; it can be converted into a string to get the source code. It expects
  * you to prepend the transcoder JavaScript code so that the `BASIS` namespace is available.
